@@ -7,8 +7,12 @@ se è dispari inseriscilo nell’array.
 const my_array = [];
 
 for (let i = 0; i < 6; i++) {
-    let number = Number(prompt("inserisci un numero, se è dispari verrà aggiunto"))
-    if (number % 2 == 1) {
+    let number = Number(prompt(`inserisci il ${i + 1}* numero su 6, se è dispari verrà aggiunto`))
+
+    if (isNaN(number) || number == null) {
+        alert("Invalid input! try again");
+        i--;
+    } else if (number % 2 == 1) {
         my_array.unshift(number)
         console.log(`${number} is odd, Added`);
     }
