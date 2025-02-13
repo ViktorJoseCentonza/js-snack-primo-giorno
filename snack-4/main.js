@@ -13,7 +13,7 @@ for (let i = 0; i < 6; i++) {
         alert("Invalid input! try again");
         i--;
     } else if (number % 2 == 1) {
-        my_array.unshift(number)
+        my_array.push(number)
         console.log(`${number} is odd, Added`);
     }
 }
